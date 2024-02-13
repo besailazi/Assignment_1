@@ -23,12 +23,6 @@ h1{
    color: #062240;
 }
 
-svg {
-	padding-left: 200px;
-	width: 600px;
-	height: 600px;
-}
-
 #categories {
 	display: flex;
 	justify-content: space-around;
@@ -93,4 +87,37 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/* MAKE THE WEBSITE RESPONSIVE */
+@media screen and (max-width: 768px) {
+	h1 {
+		 margin: 3rem auto; 
+		 font-size: 3rem; 
+	}
+
+	#categories {
+		 flex-wrap: wrap; 
+		 justify-content: center;
+	} 
+
+	.categoryButton {
+		 padding: 15px; 
+		 font-size: 1rem; 
+		 margin: 10px; 
+	}
+
+	#backButton {
+		 margin: 20px auto; 
+	}
+
+	#content {
+		 padding: 0 10px; 
+	}
+
+	.item {
+		 padding: 10px; 
+		 margin-bottom: 10px; 
+	}
+
 }

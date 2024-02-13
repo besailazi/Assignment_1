@@ -1,14 +1,18 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
 	const backButton = document.querySelector("#backButton");
 	const categories = document.querySelector("#categories");
 	const contentDiv = document.querySelector("#content");
 
+	// ADD LISTENER FOR THE BACK BUTTON
 	backButton.addEventListener("click", function() {
 		 backButton.style.display = "none";
 		 categories.style.display = "block";
 		 contentDiv.innerHTML = "";
 	});
 
+	// SELECT AND ADD LISTENERS TO FETCH DATA 
 	const categoryButtons = document.querySelectorAll(".categoryButton");
 	categoryButtons.forEach(button => {
 		 button.addEventListener("click", async function() {
@@ -16,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			  backButton.style.display = "block";
 			  categories.style.display = "none";
 			  try {
+
+				// FETCH DATA FROM SWAPI
 					const response = await fetch(`https://swapi.dev/api/${category}/`);
 					const data = await response.json();
 					const items = data.results.slice(0, 6);
@@ -39,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 						 itemDiv.appendChild(title);
 						 itemDiv.appendChild(propertiesDiv);
 
-						 // Fetch image for each item
+						 // FETCH IMAGE FOR EACH ITEM
 						 const imageUrl = await fetchImageForItem(item, category);
 						 if (imageUrl) {
 							  const image = document.createElement('img');
@@ -64,13 +70,11 @@ async function fetchImageForItem(item, category) {
     } else if (item.title) {
         imageName = item.title.replace(/ /g, "_");
     } else {
-        
+
         return null;
     }
 
-    
     const imageUrl = `assets/${category}/${imageName}.jpeg`;
-
-   
-    return imageUrl;
+    
+	 return imageUrl;
 }
