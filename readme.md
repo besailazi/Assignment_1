@@ -19,3 +19,5 @@ This project is a simple web application that allows users to browse information
 - Star Wars API (SWAPI): https://swapi.dev/
 - Images sourced from various Star Wars media.
 
+## gitHub link
+- https://github.com/besailazi/Assignment_1.git
