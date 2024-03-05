@@ -1,15 +1,17 @@
 
-
+// SELECT THE DOM ELMENTS
 document.addEventListener("DOMContentLoaded", function() {
-	const backButton = document.querySelector("#backButton");
-	const categories = document.querySelector("#categories");
-	const contentDiv = document.querySelector("#content");
+	const backButton = document.querySelector(".backButton");
+	const categories = document.querySelector(".categories");
+	const contentDiv = document.querySelector(".content");
+   const mainPageImage = document.querySelector(".mainPageImage");
 
 	// ADD LISTENER FOR THE BACK BUTTON
-	backButton.addEventListener("click", function() {
+	backButton.addEventListener("click", function(){
 		 backButton.style.display = "none";
-		 categories.style.display = "block";
+		 categories.style.display = "flex";
 		 contentDiv.innerHTML = "";
+		 mainPageImage.style.display = "block";
 	});
 
 	// SELECT AND ADD LISTENERS TO FETCH DATA 
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			  const category = button.dataset.category;
 			  backButton.style.display = "block";
 			  categories.style.display = "none";
+			  mainPageImage.style.display = "none";
 			  try {
 
 				// FETCH DATA FROM SWAPI
