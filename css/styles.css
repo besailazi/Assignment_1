@@ -39,16 +39,17 @@ h1 {
 .categoryButton {
 	padding: 30px;
 	font-size: 1.5rem;
-	background-color: #062240;
+	font-weight: bold;
 	box-shadow: 5px 5px 10px yellow;
+	background: none;
 	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-	color: #ccc;
+	cursor: pointer;	
 }
 
 .categoryButton:hover {
-	background-color: #39597b;
+	background-color: #062240;
+	color: white;
+	border-radius: 10px;
 }
 
 .backButton {
@@ -57,16 +58,17 @@ h1 {
 	padding: 30px;
 	margin: 50px auto;
 	font-size: 1.5rem;
-	background-color: #062240;
+	font-weight: bold;
+	background: none;
 	box-shadow: 5px 5px 10px yellow;
-	color: #ccc;
 	border: none;
-	border-radius: 10px;
 	cursor: pointer;
 }
 
 .backButton:hover {
-	background-color: #39597b;
+	background-color: #062240;
+	color: white;
+	border-radius: 10px;
 }
 
 .content {
