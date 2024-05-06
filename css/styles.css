@@ -23,6 +23,7 @@ h1 {
 }
 
 .mainPageImage {
+	box-shadow: 5px 5px 10px yellow;
 	display: block;
 	margin: 0 auto; 
 	max-width: 100%; 
@@ -80,7 +81,10 @@ h1 {
 }
 
 .item {
-	flex-basis: calc(50% - 40px); 
+	background-color: #062240;
+	color: white;
+	box-shadow: 5px 5px 10px yellow;
+	flex-basis: calc(33.33% - 40px); 
 	border: 1px solid #062240;
 	border-radius: 10px;
 	padding: 15px;
@@ -88,12 +92,13 @@ h1 {
 	display: flex; 
 	flex-direction: column; 
 	align-items: center; 
+	position: relative;
 }
 
 .item h2 {
 	margin-top: 0;
 	margin-bottom: 10px; 
-	text-align: center; 
+	text-align: left; 
 }
 
 .item .properties {
@@ -103,12 +108,13 @@ h1 {
 }
 
 .item img {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	display: block;
-	margin-bottom: 10px;
-	border-radius: 5px;
+	 width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    align-self: flex-end;
 }
 
 footer {
@@ -138,7 +144,8 @@ footer {
 	.backButton {
 		padding: 15px;
 		font-size: 1rem;
-		margin: 10px auto;
+		margin: 0 auto;
+		margin-bottom: 30px;
 	}
 
 	.content {
